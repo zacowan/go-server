@@ -11,7 +11,7 @@ IMAGE_VERSION="latest"
 
 # Docker command information
 DOCKERCMD="docker"
-OPTIONS="--rm -it -v ${WORKING_DIR}/src:/usr/src/${DOCKER_SRC}"
+OPTIONS="--rm -it -v ${WORKING_DIR}/src:/usr/src/${DOCKER_SRC} -p 8080:8080"
 
 # Constructed command
 COMMAND="${DOCKERCMD} run ${OPTIONS} ${IMAGE_NAME}:${IMAGE_VERSION}"
